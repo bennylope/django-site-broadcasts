@@ -26,11 +26,13 @@ Usage
 
 
 If you've added the context processor to your list of context processors, you
-can simply refer to the current message using the context variable:
-
-::
+can simply refer to the current message using the context variable::
 
     {{ broadcast_message }}
+
+The message itself should be displayed with::
+
+    {{ broadcast_message.message }}
 
 TO-DO
 =====
