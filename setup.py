@@ -1,16 +1,30 @@
-from setuptools import setup, find_packages
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
 import os
+import sys
+from setuptools import setup, find_packages
+import broadcasts
+
+
+if sys.argv[-1] == 'publish':
+    os.system('python setup.py sdist upload')
+    os.system('python setup.py bdist_wheel upload')
+    sys.exit()
+
+
+readme = open('README.rst').read()
+history = open('HISTORY.rst').read().replace('.. :changelog:', '')
 
 
 setup(
     author="Ben Lopatin",
     author_email="ben.lopatin@wellfireinteractive.com",
     name='django-site-broadcasts',
-    version='0.1.0',
+    version=broadcasts.__version__,
     description='A small Django app that displays temporary, '
                 'short broadcasts across a site.',
-    long_description=open(os.path.join(os.path.dirname(__file__),
-        'README.rst')).read(),
+    long_description=readme + '\n\n' + history,
     url='https://github.com/bennylope/django-site-broadcasts/',
     license='BSD License',
     platforms=['OS Independent'],
