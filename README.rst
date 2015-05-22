@@ -6,14 +6,16 @@ The site broadcast application allows users to define short messages and
 announcements that should be displayed across a site.
 
 Each broadcast message consists of a short message, an optional start time, and
-a completion time, when the 
-
-should be displayed across a site
+a completion time, when the should be displayed across a site.
 
 Installation
 ============
 
-Clone the repository and use the ``setup.py`` file to install the application.
+Use pip:
+
+    pip install django-site-broadcasts
+
+Or clone the repository and use the ``setup.py`` file to install the application.
 
     python setup.py install
 
@@ -23,7 +25,6 @@ Then add ``broadcasts`` to your ``INSTALLED_APPS`` and
 
 Usage
 =====
-
 
 If you've added the context processor to your list of context processors, you
 can simply refer to the current message using the context variable::

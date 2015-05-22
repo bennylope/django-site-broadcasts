@@ -6,7 +6,7 @@ setup(
     author="Ben Lopatin",
     author_email="ben.lopatin@wellfireinteractive.com",
     name='django-site-broadcasts',
-    version='0.0.1',
+    version='0.1.0',
     description='A small Django app that displays temporary, '
                 'short broadcasts across a site.',
     long_description=open(os.path.join(os.path.dirname(__file__),
@@ -15,7 +15,7 @@ setup(
     license='BSD License',
     platforms=['OS Independent'],
     classifiers=[
-        'Development Status :: 2 - Pre-Alpha',
+        'Development Status :: 3 - Alpha',
         'Environment :: Web Environment',
         'Intended Audience :: Developers',
         'License :: OSI Approved :: BSD License',
@@ -27,6 +27,5 @@ setup(
         'Django>=1.0',
     ],
     packages=find_packages(),
-    zip_safe = False
+    zip_safe=False,
 )
-
