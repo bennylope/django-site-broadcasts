@@ -3,6 +3,11 @@
 History
 =======
 
+0.1.1
+-----
+
+* Fix an installation bug
+
 0.1.0
 -----
 
