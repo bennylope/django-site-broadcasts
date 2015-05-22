@@ -10,6 +10,7 @@ class BroadcastMessageForm(forms.ModelForm):
 
     class Meta:
         model = BroadcastMessage
+        fields = ('message', 'start_time', 'end_time', 'is_published')
 
     def clean(self):
         """Ensure that the start time precedes the end time"""
