@@ -4,4 +4,5 @@ Primary author:
 
 Contributors:
 
+* `Byron Ruth <https://github.com/bruth>`_
 * `Jon Smajda <https://github.com/smajda>`_
