@@ -24,4 +24,3 @@ class BroadcastManager(models.Manager):
             return self.current().order_by("end_time")[0]
         except IndexError:
             return None
-
