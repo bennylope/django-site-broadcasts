@@ -1,7 +1,6 @@
-from datetime import datetime
-
 from django.db import models
 from django.db.models import Q
+from django.utils import timezone
 
 
 class BroadcastManager(models.Manager):
@@ -15,8 +14,8 @@ class BroadcastManager(models.Manager):
 
     def current(self):
         """Return only current and active messages"""
-        return self.active().filter(end_time__gte=datetime.now()).filter(
-            Q(Q(start_time__lte=datetime.now()) | Q(start_time=None)))
+        return self.active().filter(end_time__gte=timezone.now()).filter(
+            Q(Q(start_time__lte=timezone.now()) | Q(start_time=None)))
 
     def latest(self):
         """Return the broadcast message to display"""
